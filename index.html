@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<title>test yourself</title>
+</head>
+
+<body>
+
+<div class="full">
+
+<nav>
+    <div class="container">
+        <ul class="logo">
+            <li>
+                <a href="index.html"><img class="logo" src="./image/logo (1).png" alt="logo"></a>
+            </li>
+        </ul>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="test.html">Tests</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+<section id="home" class="container">
+    <div class="hero">
+        <h1>Test Your Programming Knowledge</h1>
+        <p>Practice with our interactive quizzes and improve your coding skills in HTML, CSS, JavaScript,
+            Scratch, and C++</p>
+        <a href="test.html" class="btn" onclick="showSection('tests')">Start Testing</a>
+    </div>
+
+    <h2>Available Tests</h2>
+    <div class="features">
+        <div class="feature-card">
+            <img src="./image/HTML5.svg.png" alt="html">
+            <h3>HTML Quiz</h3>
+            <p>Test your knowledge of HTML tags and structure</p>
+            <a class="btn" href="Quiz.html?type=html">Start HTML Quiz</a>
+        </div>
+        <div class="feature-card">
+            <img src="./image/css.png" alt="css">
+            <h3>CSS Quiz</h3>
+            <p>Check your understanding of CSS styling</p>
+            <a class="btn" href="Quiz.html?type=css">Start CSS Quiz</a>
+        </div>
+        <div class="feature-card">
+            <img src="./image/js.png" alt="JavaScript">
+            <h3>JavaScript Quiz</h3>
+            <p>Evaluate your JavaScript programming skills</p>
+            <a class="btn" href="Quiz.html?type=javascript">Start JS Quiz</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2023 CodeQuiz. All rights reserved.</p>
+    </div>
+</footer>
+<script src="main.js"></script>
+</div>
+</body>
+
+</html>

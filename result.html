@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Results</title>
+</head>
+<body>
+<div class="full">  
+    <nav>
+    <div class="container">
+        <ul class="logo">
+            <li>
+                <a href="index.html"><img class="logo" src="./image/logo (1).png" alt="logo"></a>
+            </li>
+        </ul>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="test.html">Tests</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+    <section id="results-section" class="container hidden">
+        <div class="results-container">
+            <h2>Quiz Results</h2>
+            <div class="score-circle">
+                <span id="score"></span>/<span id="total-questions"></span>
+            </div>
+            <p id="results-message"></p>
+            <a href="test.html" class="btn">Back to Tests</a>
+        </div>
+    </section>
+    <script src="main.js"></script>
+    <script>
+      (function() {
+        try {
+          const score = localStorage.getItem('quizScore');
+          const total = localStorage.getItem('quizTotal');
+          const type = localStorage.getItem('quizType');
+
+          if (!score || !total) {
+            window.location.href = 'test.html';
+            return;
+          }
+
+          const scoreEl = document.getElementById('score');
+          const totalEl = document.getElementById('total-questions');
+          const msgEl = document.getElementById('results-message');
+
+          scoreEl.textContent = score;
+          totalEl.textContent = total;
+
+          const percentage = (parseInt(score, 10) / parseInt(total, 10)) * 100;
+          if (percentage >= 80) {
+            msgEl.textContent = 'Excellent job! You have a strong understanding of this language.';
+          } else if (percentage >= 60) {
+            msgEl.textContent = "Good effort! With a bit more practice, you'll master this language.";
+          } else {
+            msgEl.textContent = 'Keep practicing! Review the concepts and try again.';
+          }
+
+          const resultsSection = document.getElementById('results-section');
+          if (resultsSection) {
+            resultsSection.classList.remove('hidden');
+          }
+        } catch (e) {
+          window.location.href = 'test.html';
+        }
+      })();
+    </script>
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 CodeQuiz. All rights reserved.</p>
+        </div>
+    </footer>
+</div>  
+</body>
+</html>
