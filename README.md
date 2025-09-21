@@ -23,9 +23,12 @@ or add tests from the user.
 
 # What technology is used on the site?
 Three programming languages ​​were used:
-1- HTML for pages.
-2- JavaScript for interaction and movement.
-3- CSS for It formats the page.
+
+1 - HTML for pages.
+
+2 - JavaScript for interaction and movement.
+
+3 - CSS for It formats the page.
 
 Special thanks:
                                                 حابب اشكر teames ITI و المهندسين الي سعدوني كتير في هذه التدريب وشكرا علي كم المعلومات الي كان في التدريب فدني جدا وانشاء الله تتكرار تاني.
